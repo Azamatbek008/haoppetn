@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugma</title>
+    <link rel="shortcut icon" href="./microphone.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        input{
+            font-size:90px ;
+            background-color: aquamarine;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 21px;
+        }
+        input{
+            font-size: 55px;
+            padding-left: 3%;
+            width: 570px;
+            height: 100px;
+            border: 30px solid rgb(132, 29, 196);
+            border-radius: 50px
+        }
+        button{
+            width: 500px;
+            height: 50px;
+            font-size: 40px;
+            border-radius: 500px;
+            background: blue;
+            color: #bea213;
+        }
+    </style>
+</head>
+<body>
+    <input name="" type="text" id="" cols="30" rows="10" >
+    <button>button</button>
+    <script>
+        let button = document.querySelector("button");
+        let text = document.querySelector("input");
+        button.addEventListener( "click" , () =>{
+            let utterance = new
+            SpeechSynthesisUtterance(text.value);
+            speechSynthesis.speak(utterance)
+        })
+    </script>
+</body>
+</html>
